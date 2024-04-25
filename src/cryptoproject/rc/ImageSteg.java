@@ -55,9 +55,11 @@ public class ImageSteg extends javax.swing.JFrame {
     private void initComponents() {
 
         lblImageGuest = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblGuest = new javax.swing.JLabel();
         lblImageHost = new javax.swing.JLabel();
-        lblEnc = new javax.swing.JLabel();
+        lblHost = new javax.swing.JLabel();
+        lblEncrypted = new javax.swing.JLabel();
+        lblImageEncrypted = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuGstImg = new javax.swing.JMenuItem();
@@ -68,11 +70,15 @@ public class ImageSteg extends javax.swing.JFrame {
 
         lblImageGuest.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel1.setText("Guest Image");
+        lblGuest.setText("Guest Image");
 
         lblImageHost.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        lblEnc.setText("Host Image");
+        lblHost.setText("Host Image");
+
+        lblEncrypted.setText("Encrypted Image");
+
+        lblImageEncrypted.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jMenu1.setText("File");
 
@@ -94,7 +100,12 @@ public class ImageSteg extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Encrypt Image");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -105,9 +116,9 @@ public class ImageSteg extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(337, 337, 337)
-                .addComponent(jLabel1)
+                .addComponent(lblGuest)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblEnc)
+                .addComponent(lblHost)
                 .addGap(370, 370, 370))
             .addGroup(layout.createSequentialGroup()
                 .addGap(166, 166, 166)
@@ -115,19 +126,32 @@ public class ImageSteg extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addComponent(lblImageHost, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(139, 139, 139))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblEncrypted)
+                        .addGap(532, 532, 532))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblImageEncrypted, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(349, 349, 349))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblEnc))
+                    .addComponent(lblGuest, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblHost))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblImageGuest, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-                    .addComponent(lblImageHost, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(359, Short.MAX_VALUE))
+                    .addComponent(lblImageHost, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblImageGuest, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE))
+                .addGap(25, 25, 25)
+                .addComponent(lblEncrypted)
+                .addGap(18, 18, 18)
+                .addComponent(lblImageEncrypted, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
@@ -165,6 +189,10 @@ public class ImageSteg extends javax.swing.JFrame {
         //File f = new File (filel.txt);
     }//GEN-LAST:event_jMenuHstImgActionPerformed
 
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -199,13 +227,15 @@ public class ImageSteg extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuGstImg;
     private javax.swing.JMenuItem jMenuHstImg;
-    private javax.swing.JLabel lblEnc;
+    private javax.swing.JLabel lblEncrypted;
+    private javax.swing.JLabel lblGuest;
+    private javax.swing.JLabel lblHost;
+    private javax.swing.JLabel lblImageEncrypted;
     private javax.swing.JLabel lblImageGuest;
     private javax.swing.JLabel lblImageHost;
     // End of variables declaration//GEN-END:variables

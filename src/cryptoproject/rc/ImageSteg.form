@@ -29,8 +29,11 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Edit"/>
+            <Property name="text" type="java.lang.String" value="Encrypt Image"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenu2ActionPerformed"/>
+          </Events>
         </Menu>
       </SubComponents>
     </Menu>
@@ -60,9 +63,9 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="337" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Component id="lblGuest" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="lblEnc" min="-2" max="-2" attributes="0"/>
+              <Component id="lblHost" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="370" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
@@ -72,6 +75,19 @@
               <Component id="lblImageHost" min="-2" pref="454" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
           </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="lblEncrypted" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="532" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="lblImageEncrypted" min="-2" pref="454" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="349" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -79,15 +95,19 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                  <Component id="lblEnc" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblGuest" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="lblHost" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="lblImageGuest" pref="287" max="32767" attributes="0"/>
                   <Component id="lblImageHost" max="32767" attributes="0"/>
+                  <Component id="lblImageGuest" pref="287" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="359" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+              <Component id="lblEncrypted" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="lblImageEncrypted" min="-2" pref="287" max="-2" attributes="0"/>
+              <EmptySpace pref="12" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -102,7 +122,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="lblGuest">
       <Properties>
         <Property name="text" type="java.lang.String" value="Guest Image"/>
       </Properties>
@@ -116,9 +136,23 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblEnc">
+    <Component class="javax.swing.JLabel" name="lblHost">
       <Properties>
         <Property name="text" type="java.lang.String" value="Host Image"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblEncrypted">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Encrypted Image"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblImageEncrypted">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>
